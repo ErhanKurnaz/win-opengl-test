@@ -1,0 +1,10 @@
+.idea
+.vs
+cmake-build-debug
+cmake-build-debug-visual-studio
+cmake-build-release-visual-studio
+imgui.ini
+CMakeSettings.json
+releases
+out
+vendor
