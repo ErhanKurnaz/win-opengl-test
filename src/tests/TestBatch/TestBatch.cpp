@@ -9,9 +9,6 @@
 
 #define ARR_FLOAT_SIZE(type, field) (sizeof(((type*)0)->field) / sizeof(float))
 
-#define HOR_VAL 10.0f
-#define VERT_VAL 10.0f
-
 namespace test {
     struct Vertex {
         glm::vec3 Position;
@@ -21,7 +18,7 @@ namespace test {
     };
 
     TestBatch::TestBatch()
-        : m_Camera(-HOR_VAL, HOR_VAL, -VERT_VAL, VERT_VAL) {
+        : m_Camera(-1.6f, 1.6f, -0.9, 0.9f) {
 
         const unsigned int maxQuadCount = 1000;
         const unsigned int maxVertexCount = maxQuadCount * 4;
