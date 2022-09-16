@@ -12,6 +12,7 @@
 #include "common/Core.h"
 
 #include "common/Appstate.h"
+#include "Event/Event.h"
 
 namespace test {
     class Test {
@@ -21,6 +22,7 @@ namespace test {
 
         virtual void OnUpdate(const AppState& appState) {}
         virtual void OnRender(const Renderer& renderer) {}
+        virtual void OnEvent(const Event& event) {}
         virtual void OnIMGuiRender() {}
     };
 

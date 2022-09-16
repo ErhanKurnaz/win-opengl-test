@@ -20,6 +20,8 @@ namespace test {
 
         void OnIMGuiRender() override;
 
+        void OnEvent(const Event &event) override;
+
     private:
         std::unique_ptr<VertexArray> m_VAO;
         std::unique_ptr<VertexBuffer> m_VertexBuffer;

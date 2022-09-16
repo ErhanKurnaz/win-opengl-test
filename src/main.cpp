@@ -39,6 +39,8 @@ int main() {
         return 1;
     }
 
+    glfwSetKeyCallback(window, KeyEvent::HandleGLFWEvent);
+
     std::cout << glGetString(GL_VERSION) << std::endl;
 
     (dynamic_cast<WindowsInput*>(Input::GetInstance()))->SetWindow(window);
@@ -71,6 +73,10 @@ int main() {
             ImGui::NewFrame();
 
             if (currentTest) {
+                while (!Event::GetQueue()->empty()) {
+                    auto event = Event::PopEvent();
+                    currentTest->OnEvent(*event);
+                }
                 currentTest->OnUpdate(appState);
                 currentTest->OnRender(renderer);
                 ImGui::Begin("Test");

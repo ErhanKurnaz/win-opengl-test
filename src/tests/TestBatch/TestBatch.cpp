@@ -167,4 +167,8 @@ namespace test {
 
     void TestBatch::OnIMGuiRender() {
     }
+
+    void TestBatch::OnEvent(const Event &event) {
+        std::cout << event.GetType() << std::endl;
+    }
 } // test
